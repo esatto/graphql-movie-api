@@ -14,7 +14,6 @@
     "url": "https://github.com/esatto/graphql-movie-api.git"
   },
   "scripts": {
-    "prestart": "npm run build",
     "start": "concurrently \"npm:watch\" \"npm:nodemon\"",
     "build": "tsc",
     "watch": "tsc -w",
