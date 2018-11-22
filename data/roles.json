@@ -1,0 +1,87 @@
+{
+  "1": {
+    "id": "1",
+    "actor": "nm0748620",
+    "roles": ["Scott Lang", "Ant-Man"]
+  },
+  "2": {
+    "id": "2",
+    "actor": "nm0000140",
+    "roles": ["Dr. Hank Pym"]
+  },
+  "3": {
+    "id": "3",
+    "actor": "nm1431940",
+    "roles": ["Hope van Dyne"]
+  },
+  "4": {
+    "id": "4",
+    "actor": "nm0000375",
+    "roles": ["Tony Stark", "Iron Man"]
+  },
+  "5": {
+    "id": "5",
+    "actor": "nm0005024",
+    "roles": ["Rhodey"]
+  },
+  "6": {
+    "id": "6",
+    "actor": "nm0000313",
+    "roles": ["Obadiah Stane"]
+  },
+  "7": {
+    "id": "7",
+    "actor": "nm1165110",
+    "roles": ["Thor"]
+  },
+  "8": {
+    "id": "8",
+    "actor": "nm0000204",
+    "roles": ["Jane Foster"]
+  },
+  "9": {
+    "id": "9",
+    "actor": "nm1089991",
+    "roles": ["Loki"]
+  },
+  "10": {
+    "id": "10",
+    "actor": "nm0262635",
+    "roles": ["Steve Rogers", "Captain America"]
+  },
+  "11": {
+    "id": "11",
+    "actor": "nm0749263",
+    "roles": ["Bruce Banner", "The Hulk"]
+  },
+  "12": {
+    "id": "12",
+    "actor": "nm0001570",
+    "roles": ["Bruce Banner"]
+  },
+  "13": {
+    "id": "13",
+    "actor": "nm0000239",
+    "roles": ["Betty Ross"]
+  },
+  "14": {
+    "id": "14",
+    "actor": "nm0000619",
+    "roles": ["Emil Blonsky"]
+  },
+  "15": {
+    "id": "15",
+    "actor": "nm0005351",
+    "roles": ["Wade", "Deadpool"]
+  },
+  "16": {
+    "id": "16",
+    "actor": "nm4175221",
+    "roles": ["Dopinder"]
+  },
+  "17": {
+    "id": "17",
+    "actor": "nm4534098",
+    "roles": ["Ajax"]
+  }
+}

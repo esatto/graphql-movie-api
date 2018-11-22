@@ -1,0 +1,37 @@
+{
+  "name": "graphql-movie-api",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Jonathan Edenström",
+    "email": "jonathan@edenstrom.io",
+    "url": "https://edenstrom.io"
+  },
+  "homepage": "https://github.com/esatto/graphql-movie-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esatto/graphql-movie-api.git"
+  },
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "concurrently \"npm:watch\" \"npm:nodemon\"",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "nodemon": "nodemon dist/index.js"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.0.3",
+    "concurrently": "^4.1.0",
+    "graphqlgen": "^0.4.0",
+    "nodemon": "^1.18.6",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "apollo-server": "^2.2.2",
+    "apollo-server-express": "^2.2.2",
+    "express": "^4.16.4",
+    "graphql": "^14.0.2",
+    "graphql-import": "^0.7.1"
+  }
+}

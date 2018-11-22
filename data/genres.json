@@ -1,0 +1,26 @@
+{
+  "1": {
+    "id": "1",
+    "name": "Action"
+  },
+  "2": {
+    "id": "2",
+    "name": "Adventure"
+  },
+  "3": {
+    "id": "3",
+    "name": "Comedy"
+  },
+  "4": {
+    "id": "4",
+    "name": "Crime"
+  },
+  "5": {
+    "id": "5",
+    "name": "Sci-Fi"
+  },
+  "6": {
+    "id": "6",
+    "name": "Fantasy"
+  }
+}

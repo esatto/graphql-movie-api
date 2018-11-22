@@ -1,0 +1,81 @@
+type Actor {
+  id: ID!
+  name: String!
+  birthday: String!
+  shortBio: String!
+  imageUrl: String!
+  rolesInMovies: [ActorRole!]!
+  nationality: String!
+}
+
+type MovieRole {
+  actor: Actor!
+  roles: [String!]!
+}
+
+type ActorRole {
+  roles: [String!]!
+  movie: Movie!
+}
+
+type Review {
+  id: ID!
+  rating: Int!
+  title: String!
+  reviewer: String!
+  movie: Movie!
+}
+
+"""
+Rating systems used in different countries
+"""
+enum Rating {
+  """
+  Used in USA. PG, PG-13, R etc.
+  """
+  MPAA
+  """
+  Used in Sweden. 0, 7, 11, 15.
+  """
+  SWEDISH
+}
+
+type Movie {
+  id: ID!
+  title: String!
+  posterImageUrl: String!
+  description: String!
+  genres: [String!]!
+  releaseDate: String!
+  """
+  Runtime in minutes
+  """
+  runtime: Int!
+  """
+  Age rating of the movie
+  """
+  rating(type: Rating = MPAA): String!
+  roles: [MovieRole!]!
+  reviews: [Review!]!
+}
+
+type Query {
+  movies(first: Int, offset: Int): [Movie!]!
+  movie(id: ID!): Movie
+  actor(id: ID!): Actor
+}
+
+input ReviewInput {
+  movieId: ID!
+  rating: Int!
+  title: String!
+  reviewer: String!
+}
+
+type Mutation {
+  addReview(review: ReviewInput!): Review!
+}
+
+type Subscription {
+  reviewAdded: Review
+}
