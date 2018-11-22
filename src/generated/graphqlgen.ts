@@ -14,6 +14,11 @@ export namespace QueryResolvers {
     offset: number | null;
   }
 
+  export interface ArgsActors {
+    first: number | null;
+    offset: number | null;
+  }
+
   export interface ArgsMovie {
     id: string;
   }
@@ -28,6 +33,13 @@ export namespace QueryResolvers {
     ctx: Context,
     info: GraphQLResolveInfo
   ) => Movie[] | Promise<Movie[]>;
+
+  export type ActorsResolver = (
+    parent: undefined,
+    args: ArgsActors,
+    ctx: Context,
+    info: GraphQLResolveInfo
+  ) => Actor[] | Promise<Actor[]>;
 
   export type MovieResolver = (
     parent: undefined,
@@ -50,6 +62,13 @@ export namespace QueryResolvers {
       ctx: Context,
       info: GraphQLResolveInfo
     ) => Movie[] | Promise<Movie[]>;
+
+    actors: (
+      parent: undefined,
+      args: ArgsActors,
+      ctx: Context,
+      info: GraphQLResolveInfo
+    ) => Actor[] | Promise<Actor[]>;
 
     movie: (
       parent: undefined,
