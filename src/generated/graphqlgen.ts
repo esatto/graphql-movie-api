@@ -9,37 +9,23 @@ type Rating = "MPAA" | "SWEDISH";
 export namespace QueryResolvers {
   export const defaultResolvers = {};
 
+  export interface ArgsMovie {
+    id: string;
+  }
+
   export interface ArgsMovies {
     first: number | null;
     offset: number | null;
-  }
-
-  export interface ArgsActors {
-    first: number | null;
-    offset: number | null;
-  }
-
-  export interface ArgsMovie {
-    id: string;
   }
 
   export interface ArgsActor {
     id: string;
   }
 
-  export type MoviesResolver = (
-    parent: undefined,
-    args: ArgsMovies,
-    ctx: Context,
-    info: GraphQLResolveInfo
-  ) => Movie[] | Promise<Movie[]>;
-
-  export type ActorsResolver = (
-    parent: undefined,
-    args: ArgsActors,
-    ctx: Context,
-    info: GraphQLResolveInfo
-  ) => Actor[] | Promise<Actor[]>;
+  export interface ArgsActors {
+    first: number | null;
+    offset: number | null;
+  }
 
   export type MovieResolver = (
     parent: undefined,
@@ -48,6 +34,13 @@ export namespace QueryResolvers {
     info: GraphQLResolveInfo
   ) => Movie | null | Promise<Movie | null>;
 
+  export type MoviesResolver = (
+    parent: undefined,
+    args: ArgsMovies,
+    ctx: Context,
+    info: GraphQLResolveInfo
+  ) => Movie[] | Promise<Movie[]>;
+
   export type ActorResolver = (
     parent: undefined,
     args: ArgsActor,
@@ -55,21 +48,14 @@ export namespace QueryResolvers {
     info: GraphQLResolveInfo
   ) => Actor | null | Promise<Actor | null>;
 
+  export type ActorsResolver = (
+    parent: undefined,
+    args: ArgsActors,
+    ctx: Context,
+    info: GraphQLResolveInfo
+  ) => Actor[] | Promise<Actor[]>;
+
   export interface Type {
-    movies: (
-      parent: undefined,
-      args: ArgsMovies,
-      ctx: Context,
-      info: GraphQLResolveInfo
-    ) => Movie[] | Promise<Movie[]>;
-
-    actors: (
-      parent: undefined,
-      args: ArgsActors,
-      ctx: Context,
-      info: GraphQLResolveInfo
-    ) => Actor[] | Promise<Actor[]>;
-
     movie: (
       parent: undefined,
       args: ArgsMovie,
@@ -77,12 +63,26 @@ export namespace QueryResolvers {
       info: GraphQLResolveInfo
     ) => Movie | null | Promise<Movie | null>;
 
+    movies: (
+      parent: undefined,
+      args: ArgsMovies,
+      ctx: Context,
+      info: GraphQLResolveInfo
+    ) => Movie[] | Promise<Movie[]>;
+
     actor: (
       parent: undefined,
       args: ArgsActor,
       ctx: Context,
       info: GraphQLResolveInfo
     ) => Actor | null | Promise<Actor | null>;
+
+    actors: (
+      parent: undefined,
+      args: ArgsActors,
+      ctx: Context,
+      info: GraphQLResolveInfo
+    ) => Actor[] | Promise<Actor[]>;
   }
 }
 

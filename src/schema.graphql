@@ -60,10 +60,10 @@ type Movie {
 }
 
 type Query {
-  movies(first: Int, offset: Int): [Movie!]!
-  actors(first: Int, offset: Int): [Actor!]!
   movie(id: ID!): Movie
+  movies(first: Int, offset: Int): [Movie!]!
   actor(id: ID!): Actor
+  actors(first: Int, offset: Int): [Actor!]!
 }
 
 input ReviewInput {
